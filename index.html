@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Stackly | Haute Couture & Avant-Garde Fashion Designer Atelier</title>
+  <meta name="description" content="Personal portfolio of lead fashion designer at Stackly. Bespoke bridal, runway collections, avant-garde silhouettes, and digital couture based in Salem & Milan.">
+  <link rel="icon" type="image/webp" href="assets/top-logo.webp">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-architectural-grid">
+
+  
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  
+  <div class="ambient-gold-glow ambient-glow-top-right"></div>
+  <div class="ambient-gold-glow ambient-glow-bottom-left"></div>
+
+  
+  <div id="stackly-preloader">
+    <div class="preloader-content">
+      <div class="preloader-circle-wrapper">
+        <div class="circle-ring ring-outer-spin"></div>
+        <div class="circle-ring ring-middle-pulse"></div>
+        <div class="circle-ring ring-inner-orbit">
+          <span class="orbit-dot"></span>
+        </div>
+        <div class="preloader-logo-box">
+          <img src="assets/top-logo.webp" alt="Stackly Atelier" class="preloader-logo-img">
+        </div>
+      </div>
+      <div class="preloader-bar-container">
+        <div class="preloader-progress-track">
+          <div class="preloader-progress-fill" id="preloader-progress-fill"></div>
+        </div>
+        <div class="preloader-meta d-flex justify-content-between align-items-center mt-2">
+          <span id="preloader-status-text">INITIALIZING ATELIER ENVIRONMENT...</span>
+          <span class="preloader-pct-badge"><span id="preloader-pct-num">0</span>%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="assets/logo.webp" alt="Stackly Haute Couture" class="brand-logo-img">
+      </a>
+
+      
+      <ul class="nav-desktop-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      
+      <div class="header-actions">
+        <a href="signin.html" class="btn-gold-outline btn-sm btn-pill d-none d-md-inline-flex">
+          <i class="fa-solid fa-lock text-warning me-1"></i> Sign In
+        </a>
+        <a href="signup.html" class="btn-gold btn-sm btn-pill header-cta-btn btn-book-fitting">
+          Book Fitting
+        </a>
+        <button type="button" class="mobile-nav-toggle" aria-label="Open mobile navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 42px;">
+      </a>
+      <button type="button" class="mobile-drawer-close btn-close" aria-label="Close menu"></button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-user-tie"></i> About Designer</a></li>
+      <li><a href="collections.html"><i class="fa-solid fa-vest"></i> Collections Lookbook</a></li>
+      <li><a href="services.html"><i class="fa-solid fa-scissors"></i> Atelier Services</a></li>
+      <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Fashion Journal</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-location-dot"></i> Salem Atelier Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="signin.html" class="btn-gold-outline w-100 text-center justify-content-center">Sign In</a>
+      <a href="signup.html" class="btn-gold w-100 text-center justify-content-center">Book Fitting</a>
+    </div>
+  </aside>
+
+  <main>
+    
+    <section class="hero-couture-section position-relative">
+      <canvas id="heroCanvas3D"></canvas>
+      <div class="container position-relative my-auto" style="z-index: 2;">
+        <div class="row justify-content-start">
+          <div class="col-lg-7 col-xl-6">
+            <div class="hero-content-wrap">
+              <span class="badge-gold-subtle mb-3">
+                <span class="badge-dot"></span> FASHION DESIGNER &bull; PERSONAL PORTFOLIO
+              </span>
+              <h1 class="hero-main-title">
+                Aria Vance &mdash; Haute Couture <span class="yellow-accent-word">Fashion Designer</span>.
+              </h1>
+              <p class="hero-subtitle">
+                Personal portfolio of fashion designer Aria Vance, showcasing bespoke runway couture, architectural silhouettes, and luxury silks.
+              </p>
+              <div class="d-flex flex-wrap gap-3 align-items-center justify-content-start">
+                <a href="collections.html" class="btn-gold btn-pulse-zoom">
+                  Explore Runway Looks <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <button type="button" class="btn-gold-outline btn-watch-runway">
+                  <i class="fa-solid fa-play text-warning me-2"></i> Watch Show Reel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="hero-bottom-stats-bar">
+        <div class="container">
+          <div class="hero-stats-grid">
+            <div class="hero-stat-item">
+              <div class="hero-stat-num" data-target="12" data-suffix="+">0+</div>
+              <div class="hero-stat-label">Years Couture Mastery</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num" data-target="145" data-suffix="+">0+</div>
+              <div class="hero-stat-label">Runway Pieces Debuted</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num highlight" data-target="100" data-suffix="%">0%</div>
+              <div class="hero-stat-label">Bespoke Handcrafted</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <div class="marquee-ticker-wrap" aria-hidden="true">
+      <div class="marquee-ticker-content">
+        <div class="marquee-item"><i class="fa-solid fa-sparkles"></i> MILAN FASHION WEEK <span class="highlight">FW26</span></div>
+        <div class="marquee-item"><i class="fa-solid fa-gem"></i> BESPOKE BRIDAL SILKS</div>
+        <div class="marquee-item"><i class="fa-solid fa-scissors"></i> SALEM ATELIER AT MMR COMPLEX</div>
+        <div class="marquee-item"><i class="fa-solid fa-leaf"></i> ZERO-WASTE TEXTILE ARCHITECTURE</div>
+        <div class="marquee-item"><i class="fa-solid fa-award"></i> PARIS COUTURE LAUREATE</div>
+        <div class="marquee-item"><i class="fa-solid fa-cube"></i> 3D DIGITAL GARMENT PROTOTYPING</div>
+        
+        <div class="marquee-item"><i class="fa-solid fa-sparkles"></i> MILAN FASHION WEEK <span class="highlight">FW26</span></div>
+        <div class="marquee-item"><i class="fa-solid fa-gem"></i> BESPOKE BRIDAL SILKS</div>
+        <div class="marquee-item"><i class="fa-solid fa-scissors"></i> SALEM ATELIER AT MMR COMPLEX</div>
+        <div class="marquee-item"><i class="fa-solid fa-leaf"></i> ZERO-WASTE TEXTILE ARCHITECTURE</div>
+        <div class="marquee-item"><i class="fa-solid fa-award"></i> PARIS COUTURE LAUREATE</div>
+        <div class="marquee-item"><i class="fa-solid fa-cube"></i> 3D DIGITAL GARMENT PROTOTYPING</div>
+      </div>
+    </div>
+
+    
+    <section class="about-couture-section reveal-on-scroll">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="about-photo-wrapper">
+              <div class="about-yellow-backdrop"></div>
+              <div class="about-image-card card-hover-modern">
+                <span class="about-brand-tag">STACKLY &bull; COUTURE</span>
+                <img src="assets/images/pexels-pavel-danilyuk-6461242.webp" alt="Aria Vance Lead Couturier in Atelier">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <span class="solonick-tag">SARTORIAL PHILOSOPHY</span>
+            <h2 class="section-title mb-2 text-dark">
+              Innovative silhouettes for <span class="yellow-accent-word">pure personal elegance</span>
+            </h2>
+            <div class="yellow-accent-line"></div>
+            <p class="mb-3 text-secondary">
+              As a fashion designer, I merge classical Parisian draping with avant-garde structural cuts, tailoring pure mulberry silk to your individual posture.
+            </p>
+
+            <div class="about-pillars-grid">
+              <div class="about-pillar-item">
+                <div class="about-pillar-icon">
+                  <i class="fa-solid fa-vest-patches"></i>
+                </div>
+                <div>
+                  <h5>Haute Couture Tailoring</h5>
+                  <p>Hand-sewn canvas chests and bespoke lapels tailored to millimeter precision.</p>
+                </div>
+              </div>
+
+              <div class="about-pillar-item">
+                <div class="about-pillar-icon">
+                  <i class="fa-solid fa-compass-drafting"></i>
+                </div>
+                <div>
+                  <h5>Architectural Draping</h5>
+                  <p>Weightless structural volume inspired by brutalist geometry and organic silks.</p>
+                </div>
+              </div>
+
+              <div class="about-pillar-item">
+                <div class="about-pillar-icon">
+                  <i class="fa-solid fa-spa"></i>
+                </div>
+                <div>
+                  <h5>Sustainable Ahimsa Silk</h5>
+                  <p>100% cruelty-free handloom silks sourced directly from Tamil Nadu weavers.</p>
+                </div>
+              </div>
+
+              <div class="about-pillar-item">
+                <div class="about-pillar-icon">
+                  <i class="fa-solid fa-vr-cardboard"></i>
+                </div>
+                <div>
+                  <h5>3D Virtual Fitting</h5>
+                  <p>Zero-waste digital cloth simulation for clients in Salem, Paris, and Milan.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-1">
+              <a href="about.html" class="btn-gold btn-sm">
+                My Atelier Story <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="facts-counter-section section-dark-slate reveal-on-scroll">
+      <div class="facts-bg-overlay"></div>
+      <div class="container">
+        <div class="facts-title-wrap">
+          <span class="solonick-tag">TELEMETRY &amp; METRICS</span>
+          <h2 class="facts-main-heading text-white">
+            SOME INTERESTING <span class="yellow-accent-word">FACTS</span> ABOUT ME
+          </h2>
+          <div class="yellow-accent-line"></div>
+          <p class="text-secondary" style="max-width: 580px;">
+            A decade of relentless dedication to bespoke fashion, presenting runway silhouettes across Salem and Milan.
+          </p>
+        </div>
+
+        <div class="facts-counter-grid">
+          <div class="fact-counter-card stagger-1">
+            <div class="fact-number" data-target="145">0</div>
+            <div class="fact-card-bar"></div>
+            <div class="fact-label">RUNWAY COLLECTIONS</div>
+          </div>
+
+          <div class="fact-counter-card stagger-2">
+            <div class="fact-number" data-target="357">0</div>
+            <div class="fact-card-bar"></div>
+            <div class="fact-label">PRIVATE PATRONS</div>
+          </div>
+
+          <div class="fact-counter-card stagger-3">
+            <div class="fact-number" data-target="825">0</div>
+            <div class="fact-card-bar"></div>
+            <div class="fact-label">ATELIER STITCH HOURS</div>
+          </div>
+
+          <div class="fact-counter-card stagger-4">
+            <div class="fact-number" data-target="1124">0</div>
+            <div class="fact-card-bar"></div>
+            <div class="fact-label">DRAPING SESSIONS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="video-showcase-section reveal-on-scroll">
+      <div class="container">
+        <div class="video-showcase-grid">
+          
+          <div class="video-showcase-media">
+            <div class="video-box-card card-hover-modern">
+              <img src="assets/images/video_presentation.webp" alt="Stackly Runway Fashion Presentation">
+              <button type="button" class="video-play-trigger btn-pulse-zoom" aria-label="Play runway fashion presentation video">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
+          </div>
+
+          
+          <div class="video-showcase-text-wrap">
+            <div class="video-showcase-header">
+              <span class="solonick-tag">IMMERSIVE RUNWAY RECORD</span>
+              <h2 class="section-title text-dark mb-2">
+                MY RUNWAY <span class="yellow-accent-word">PRESENTATION</span>
+              </h2>
+              <div class="yellow-accent-line"></div>
+            </div>
+            <div class="video-showcase-body">
+              <p class="text-secondary mb-3">
+                Step backstage into my private runway showcase. Experience fluid pleated silks, hand-embroidered metallic threads, and architectural tailoring documented live.
+              </p>
+              <p class="text-secondary mb-4">
+                Each garment takes over 180 hours of hand craftsmanship at my Salem atelier at MMR Complex before debuting under international spotlights.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <a href="collections.html" class="btn-gold btn-sm">
+                  Explore Full Lookbook <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <button type="button" class="btn-gold-outline btn-sm btn-watch-runway">
+                  <i class="fa-solid fa-play text-warning me-1"></i> Watch Video
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="collections-section reveal-on-scroll">
+      <div class="container">
+        <div class="section-head-bar">
+          <div>
+            <span class="solonick-tag">SEASONAL ARCHIVE</span>
+            <h2 class="section-title text-dark">
+              Signature <span class="yellow-accent-word">Collections</span> &amp; Silhouettes
+            </h2>
+          </div>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn-gold-outline swiper-btn-prev" aria-label="Previous slide">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button type="button" class="btn-gold-outline swiper-btn-next" aria-label="Next slide">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        
+        <div class="swiper swiper-collections-container">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <span class="lookbook-tag">HAUTE COUTURE</span>
+                    <div class="lookbook-image-wrap">
+                      <img src="assets/images/pexels-rgsk97-1477437.webp" alt="Aura Obsidian Gown">
+                      <div class="lookbook-overlay-cta">
+                        <h4 class="lookbook-title">Aura Obsidian Gown</h4>
+                        <p class="lookbook-desc">Structured organza bodice with 24K bullion hand embroidery.</p>
+                        <span class="text-warning small fw-bold"><i class="fa-solid fa-arrows-rotate me-1"></i> Flip for Specs</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <span class="solonick-tag mb-2">LOOK 01 &bull; SALEM</span>
+                      <h4 class="text-white fw-bold mb-2">Aura Obsidian Gown</h4>
+                      <div class="yellow-accent-line my-2" style="width: 28px; height: 2px;"></div>
+                      <p class="small text-secondary mb-3">Pure handloom organza with metallic thread zardozi crafted over 160 hours.</p>
+                      <div class="bg-black bg-opacity-40 p-2 rounded border border-secondary mb-3">
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Hours:</span><strong class="text-warning">160 hrs</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Cut:</span><strong>French Moulage</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1"><span>Silk:</span><strong>100% Ahimsa</strong></div>
+                      </div>
+                    </div>
+                    <a href="signup.html" class="btn-gold btn-sm w-100 text-center btn-book-fitting">Inquire Commission</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="swiper-slide">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <span class="lookbook-tag">AVANT-GARDE</span>
+                    <div class="lookbook-image-wrap">
+                      <img src="assets/images/runway_1.webp" alt="Celestial Kinetic Coat">
+                      <div class="lookbook-overlay-cta">
+                        <h4 class="lookbook-title">Celestial Kinetic Coat</h4>
+                        <p class="lookbook-desc">Sculptural exaggerated lapels tailored from pure cashmere.</p>
+                        <span class="text-warning small fw-bold"><i class="fa-solid fa-arrows-rotate me-1"></i> Flip for Specs</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <span class="solonick-tag mb-2">LOOK 02 &bull; MILAN</span>
+                      <h4 class="text-white fw-bold mb-2">Celestial Kinetic Coat</h4>
+                      <div class="yellow-accent-line my-2" style="width: 28px; height: 2px;"></div>
+                      <p class="small text-secondary mb-3">Architectural geometric lapels with zero-waste textile drafting.</p>
+                      <div class="bg-black bg-opacity-40 p-2 rounded border border-secondary mb-3">
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Hours:</span><strong class="text-warning">120 hrs</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Weight:</span><strong>Heavy-gauge Cashmere</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1"><span>Finish:</span><strong>Hand-stitched Horn Buttons</strong></div>
+                      </div>
+                    </div>
+                    <a href="signup.html" class="btn-gold btn-sm w-100 text-center btn-book-fitting">Inquire Commission</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="swiper-slide">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <span class="lookbook-tag">BRIDAL COUTURE</span>
+                    <div class="lookbook-image-wrap">
+                      <img src="assets/images/pexels-sandra-elizabeth-rivera-ayauca-3003710-22605246.webp" alt="Nocturne Bridal Ensemble">
+                      <div class="lookbook-overlay-cta">
+                        <h4 class="lookbook-title">Nocturne Bridal Veil</h4>
+                        <p class="lookbook-desc">Pure Kanchipuram Ahimsa silk with French Chantilly lace.</p>
+                        <span class="text-warning small fw-bold"><i class="fa-solid fa-arrows-rotate me-1"></i> Flip for Specs</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <span class="solonick-tag mb-2">LOOK 03 &bull; BESPOKE</span>
+                      <h4 class="text-white fw-bold mb-2">Nocturne Bridal Veil</h4>
+                      <div class="yellow-accent-line my-2" style="width: 28px; height: 2px;"></div>
+                      <p class="small text-secondary mb-3">Bespoke bridal gown layered with delicate hand-loomed gold brocade.</p>
+                      <div class="bg-black bg-opacity-40 p-2 rounded border border-secondary mb-3">
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Hours:</span><strong class="text-warning">210 hrs</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Weave:</span><strong>Kanchipuram Ahimsa</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1"><span>Lace:</span><strong>French Chantilly</strong></div>
+                      </div>
+                    </div>
+                    <a href="signup.html" class="btn-gold btn-sm w-100 text-center btn-book-fitting">Inquire Commission</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="swiper-slide">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <span class="lookbook-tag">READY-TO-WEAR</span>
+                    <div class="lookbook-image-wrap">
+                      <img src="assets/images/pexels-d-ng-hoang-giang-921242705-39193467.webp" alt="Sartorial Velvet Tuxedo">
+                      <div class="lookbook-overlay-cta">
+                        <h4 class="lookbook-title">Midnight Velvet Tuxedo</h4>
+                        <p class="lookbook-desc">Double-breasted silk-velvet tailoring with peak lapels.</p>
+                        <span class="text-warning small fw-bold"><i class="fa-solid fa-arrows-rotate me-1"></i> Flip for Specs</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <span class="solonick-tag mb-2">LOOK 04 &bull; CAPSULE</span>
+                      <h4 class="text-white fw-bold mb-2">Midnight Velvet Tuxedo</h4>
+                      <div class="yellow-accent-line my-2" style="width: 28px; height: 2px;"></div>
+                      <p class="small text-secondary mb-3">Structured shoulders and hand-padded lapels crafted for evening galas.</p>
+                      <div class="bg-black bg-opacity-40 p-2 rounded border border-secondary mb-3">
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Hours:</span><strong class="text-warning">95 hrs</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Fabric:</span><strong>Italian Silk-Velvet</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1"><span>Lapel:</span><strong>Satin Peak Finish</strong></div>
+                      </div>
+                    </div>
+                    <a href="signup.html" class="btn-gold btn-sm w-100 text-center btn-book-fitting">Inquire Commission</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="swiper-slide">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <span class="lookbook-tag">3D DIGITAL COUTURE</span>
+                    <div class="lookbook-image-wrap">
+                      <img src="assets/images/pexels-ron-lach-7778888.webp" alt="Ethereal Prism Gown">
+                      <div class="lookbook-overlay-cta">
+                        <h4 class="lookbook-title">Ethereal Prism Gown</h4>
+                        <p class="lookbook-desc">Parametric 3D corsetry with fluid pleated metallic chiffon.</p>
+                        <span class="text-warning small fw-bold"><i class="fa-solid fa-arrows-rotate me-1"></i> Flip for Specs</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <span class="solonick-tag mb-2">LOOK 05 &bull; DIGITAL</span>
+                      <h4 class="text-white fw-bold mb-2">Ethereal Prism Gown</h4>
+                      <div class="yellow-accent-line my-2" style="width: 28px; height: 2px;"></div>
+                      <p class="small text-secondary mb-3">Computational simulation meeting bespoke artisanal hand-draping.</p>
+                      <div class="bg-black bg-opacity-40 p-2 rounded border border-secondary mb-3">
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>CAD:</span><strong class="text-warning">Clo3D Parametric</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Corsetry:</span><strong>3D Printed Lattice</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1"><span>Chiffon:</span><strong>Micro-pleated Metallic</strong></div>
+                      </div>
+                    </div>
+                    <a href="signup.html" class="btn-gold btn-sm w-100 text-center btn-book-fitting">Inquire Commission</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="swiper-slide">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <span class="lookbook-tag">HAUTE COUTURE</span>
+                    <div class="lookbook-image-wrap">
+                      <img src="assets/images/runway_2.webp" alt="Saffron Solstice Cape">
+                      <div class="lookbook-overlay-cta">
+                        <h4 class="lookbook-title">Saffron Solstice Cape</h4>
+                        <p class="lookbook-desc">Voluminous high-neck drape in raw mustard gold handloom brocade.</p>
+                        <span class="text-warning small fw-bold"><i class="fa-solid fa-arrows-rotate me-1"></i> Flip for Specs</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <span class="solonick-tag mb-2">LOOK 06 &bull; ATELIER</span>
+                      <h4 class="text-white fw-bold mb-2">Saffron Solstice Cape</h4>
+                      <div class="yellow-accent-line my-2" style="width: 28px; height: 2px;"></div>
+                      <p class="small text-secondary mb-3">Grand architectural cape constructed in heirloom zari handloom weave.</p>
+                      <div class="bg-black bg-opacity-40 p-2 rounded border border-secondary mb-3">
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Hours:</span><strong class="text-warning">175 hrs</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1 border-bottom border-secondary border-opacity-25"><span>Brocade:</span><strong>Pure Raw Mulberry Silk</strong></div>
+                        <div class="d-flex justify-content-between small text-white py-1"><span>Zari:</span><strong>Electrum Gold Handloom</strong></div>
+                      </div>
+                    </div>
+                    <a href="signup.html" class="btn-gold btn-sm w-100 text-center btn-book-fitting">Inquire Commission</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="services-couture-section reveal-on-scroll">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span class="solonick-tag">TAILORED EXCELLENCE</span>
+          <h2 class="section-title text-dark">
+            Comprehensive <span class="yellow-accent-word">Atelier Services</span>
+          </h2>
+          <div class="yellow-accent-line center"></div>
+          <p class="text-secondary mx-auto" style="max-width: 580px;">
+            Bespoke design direction and precision tailoring guided by master craftsmanship from concept to runway.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card-3d card-hover-modern">
+              <div class="service-card-thumb">
+                <img src="assets/images/pexels-ron-lach-9850423.webp" alt="Custom Bridal Couture Atelier Crafting">
+              </div>
+              <div class="service-icon-box">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h3 class="service-card-title">Custom Bridal &amp; Gala Couture</h3>
+              <p class="service-card-text">
+                One-of-a-kind wedding gowns and red carpet ensembles engineered with individual body geometry.
+              </p>
+              <ul class="service-features-list">
+                <li><i class="fa-solid fa-check"></i> Private fittings at Salem studio</li>
+                <li><i class="fa-solid fa-check"></i> Bespoke muslin toile prototyping</li>
+                <li><i class="fa-solid fa-check"></i> Hand-embellished crystals &amp; zardozi</li>
+              </ul>
+              <a href="services.html" class="btn-gold-outline btn-sm mt-auto">Learn More</a>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card-3d card-hover-modern">
+              <div class="service-card-thumb">
+                <img src="assets/images/pexels-cottonbro-6069964.webp" alt="Runway Direction & Capsules">
+              </div>
+              <div class="service-icon-box">
+                <i class="fa-solid fa-person-dress"></i>
+              </div>
+              <h3 class="service-card-title">Runway Direction &amp; Capsule Lines</h3>
+              <p class="service-card-text">
+                Complete design direction, moodboard generation, and sample production for luxury labels.
+              </p>
+              <ul class="service-features-list">
+                <li><i class="fa-solid fa-check"></i> 12 to 36 look seasonal capsules</li>
+                <li><i class="fa-solid fa-check"></i> Technical production specification packs</li>
+                <li><i class="fa-solid fa-check"></i> Backstage runway styling &amp; choreography</li>
+              </ul>
+              <a href="services.html" class="btn-gold-outline btn-sm mt-auto">Learn More</a>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card-3d card-hover-modern">
+              <div class="service-card-thumb">
+                <img src="assets/images/craft_atelier_2.webp" alt="3D Digital Garment Prototyping">
+              </div>
+              <div class="service-icon-box">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+              <h3 class="service-card-title">3D Digital Garment Prototyping</h3>
+              <p class="service-card-text">
+                Hyper-realistic digital cloth simulations in Clo3D to evaluate drape and tension with zero fabric waste.
+              </p>
+              <ul class="service-features-list">
+                <li><i class="fa-solid fa-check"></i> 80% reduction in fabric sample waste</li>
+                <li><i class="fa-solid fa-check"></i> Photorealistic 360-degree virtual fittings</li>
+                <li><i class="fa-solid fa-check"></i> Exportable avatar garment animations</li>
+              </ul>
+              <a href="services.html" class="btn-gold-outline btn-sm mt-auto">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="skills-craft-section reveal-on-scroll">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6">
+            <span class="solonick-tag">TECHNICAL EXPERTISE</span>
+            <h2 class="section-title text-dark mb-2">
+              Mastering the <span class="yellow-accent-word">Grammar of Fashion</span>
+            </h2>
+            <div class="yellow-accent-line"></div>
+            <p class="text-secondary mb-3">
+              Combining centuries-old French moulage with cutting-edge computational pattern drafting at our Salem atelier.
+            </p>
+
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">French Moulage &amp; Pattern Architecture</span>
+                <span class="skill-pct">98%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 98%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">Zardozi &amp; Bullion Hand Embroidery</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 95%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">Sustainable Ahimsa Silk &amp; Handloom Sourcing</span>
+                <span class="skill-pct">96%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 96%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">3D Virtual Garment CAD &amp; Clo3D</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" style="width: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="position-relative card-hover-modern rounded-3 overflow-hidden shadow-sm">
+              <img src="assets/images/pexels-cottonbro-5582523.webp" alt="Master Tailor Hand Stitching in Atelier" class="w-100" style="height: 380px; object-fit: cover;">
+              <div class="position-absolute bottom-0 start-0 p-3 m-3 bg-white bg-opacity-95 rounded-2 border border-warning">
+                <div class="text-warning fw-bold small text-uppercase mb-1"><i class="fa-solid fa-circle-check me-1"></i> Salem Heritage Studio</div>
+                <div class="text-dark small">Handcrafting bespoke masterpieces at MMR Complex, Chinna Thirupathi.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="expand-showcase" id="expandShowcase">
+      <div class="expand-sticky">
+        <div class="expand-media">
+          <div class="expand-stage">
+            <img class="expand-bg" src="assets/images/pexels-pavel-danilyuk-6461324.webp" alt="Couturier fitting a linen shirt on a client in the atelier">
+            <div class="expand-shade"></div>
+
+            <div class="expand-copy">
+              <span class="expand-kicker">[ THE FITTING ROOM ]</span>
+              <h2 class="expand-big">Measured twice,<br><span>worn forever.</span></h2>
+              <p class="expand-mini">Every garment begins as a conversation. Pins, chalk and a yellow tape &mdash; we shape linen, wool and silk around the way you move, until the fit feels like confidence.</p>
+            </div>
+
+            <div class="expand-thumb">
+              <img src="assets/images/pexels-pavel-danilyuk-6461242.webp" alt="Atelier detail">
+              <p>Three fittings, one flawless silhouette &mdash; hand-finished before it ever leaves the studio.</p>
+            </div>
+
+            <div class="expand-logos" aria-label="Fashion partners">
+              <div class="expand-logos-track">
+                <span class="xl xl-1"><i class="fa-solid fa-gem"></i> MAISON NOIR</span>
+                <span class="xl xl-2"><i class="fa-solid fa-scissors"></i> Atelier Lune</span>
+                <span class="xl xl-3"><i class="fa-solid fa-shirt"></i> HAUTE FABRIK</span>
+                <span class="xl xl-4"><i class="fa-solid fa-ruler-combined"></i> Silk &amp; Thread</span>
+                <span class="xl xl-5"><i class="fa-solid fa-crown"></i> COUTURE WEEK</span>
+                <span class="xl xl-6"><i class="fa-solid fa-spa"></i> Runway Society</span>
+                <span class="xl xl-1"><i class="fa-solid fa-gem"></i> MAISON NOIR</span>
+                <span class="xl xl-2"><i class="fa-solid fa-scissors"></i> Atelier Lune</span>
+                <span class="xl xl-3"><i class="fa-solid fa-shirt"></i> HAUTE FABRIK</span>
+                <span class="xl xl-4"><i class="fa-solid fa-ruler-combined"></i> Silk &amp; Thread</span>
+                <span class="xl xl-5"><i class="fa-solid fa-crown"></i> COUTURE WEEK</span>
+                <span class="xl xl-6"><i class="fa-solid fa-spa"></i> Runway Society</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="expand-hint"><i class="fa-solid fa-arrow-down"></i> Keep scrolling</div>
+      </div>
+    </section>
+
+    
+    <section class="testimonials-section reveal-on-scroll">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span class="solonick-tag">VIP PATRON FEEDBACK</span>
+          <h2 class="section-title text-dark">
+            Words From <span class="yellow-accent-word">Couture Patrons</span>
+          </h2>
+          <div class="yellow-accent-line center"></div>
+        </div>
+
+        <div class="swiper swiper-testimonials">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-quote-card">
+                <div class="testimonial-rating">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Aria created my custom wedding gown from pure Ahimsa silk. The precision in the fittings was sublime. Walking down the aisle felt like living inside a work of art."
+                </p>
+                <div class="testimonial-client-meta">
+                  <img src="assets/images/client_1.webp" alt="Elena Rostova" class="testimonial-avatar">
+                  <div>
+                    <div class="testimonial-client-name">Elena Rostova</div>
+                    <div class="testimonial-client-role">Vogue Paris Editorial Contributor</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-quote-card">
+                <div class="testimonial-rating">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "For the Cannes Film Festival, Aria designed a tuxedo gown that stunned every red carpet photographer. The architectural lines and dark gold accents were unforgettable."
+                </p>
+                <div class="testimonial-client-meta">
+                  <img src="assets/images/client_3.webp" alt="Sarah Jenkins" class="testimonial-avatar">
+                  <div>
+                    <div class="testimonial-client-name">Sarah Jenkins</div>
+                    <div class="testimonial-client-role">Haute Couture Collector, London</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-quote-card">
+                <div class="testimonial-rating">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "The 3D virtual fitting system saved weeks of transatlantic travel. The final garment arrived in Milan fitted to absolute millimeter perfection."
+                </p>
+                <div class="testimonial-client-meta">
+                  <img src="assets/images/client_2.webp" alt="David Chen" class="testimonial-avatar">
+                  <div>
+                    <div class="testimonial-client-name">David Chen</div>
+                    <div class="testimonial-client-role">Creative Director, Apex Luxe</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-testimonials mt-3"></div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="booking-cta-section section-dark-slate reveal-on-scroll">
+      <div class="container">
+        <div class="booking-cta-card">
+          <span class="solonick-tag">BEGIN YOUR SARTORIAL JOURNEY</span>
+          <h2 class="h2 fw-bold text-white mb-2">
+            Ready to Sculpt Your <span class="yellow-accent-word">Signature Silhouette?</span>
+          </h2>
+          <p class="text-secondary mx-auto mb-4" style="max-width: 580px;">
+            Reserve an exclusive private consultation at my Salem flagship atelier or schedule a virtual fitting session from anywhere across the globe.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="signup.html" class="btn-gold btn-book-fitting">
+              <i class="fa-solid fa-calendar-check me-2"></i> Book Private Fitting
+            </a>
+            <a href="contact.html" class="btn-gold-outline btn-visit-atelier">
+              <i class="fa-solid fa-location-dot me-2 text-warning"></i> Visit Salem Atelier
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-newsletter-box">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="solonick-tag mb-2">STAY INFORMED</span>
+            <h3 class="fw-bold text-dark mb-1">Subscribe to Stackly Atelier Gazette</h3>
+            <p class="text-secondary small mb-0">Private lookbook drops, runway previews, and bespoke Ahimsa silk sourcing dispatches.</p>
+          </div>
+          <div class="col-lg-6">
+            <form class="footer-newsletter-input-group" onsubmit="event.preventDefault(); window.location.href='404.html';">
+              <input type="email" placeholder="Enter your VIP client email..." required>
+              <button type="submit" class="btn-gold py-2 px-3">
+                <span>Subscribe</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 footer-top">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block mb-2">
+            <img src="assets/logo.webp" alt="Stackly Haute Couture" class="brand-logo-img" style="height: 36px;">
+          </a>
+          <p class="footer-brand-desc mb-3">
+            Stackly is a premier Haute Couture and Bespoke Fashion Atelier directed by lead designer Aria Vance in Salem &amp; Milan. Crafting architectural silhouettes and heirloom bridal creations for international runways.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="footer-social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="404.html" class="footer-social-icon" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="text-secondary small mt-3" style="font-size: 0.8rem;">
+            <i class="fa-solid fa-gem text-warning me-1"></i> Sustainable Ahimsa Silk Atelier
+          </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-2">
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>About</a></li>
+            <li><a href="collections.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Collections</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Services</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Journal</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+          <h4 class="footer-title">Atelier Portals</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Bespoke Bridal Salon</a></li>
+            <li><a href="signup.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>VIP Client Lounge</a></li>
+            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Digital Haute Couture</a></li>
+            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Runway Press Kit</a></li>
+            <li><a href="collections.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Archival Lookbook</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Custom Embroidery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-title">Salem Flagship Studio</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong class="text-dark">Stackly Atelier:</strong><br>
+              MMR Complex, Chinna Thirupathi, Salem 636008
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>concierge@thestackly.couture</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>+91 98420 54321 / +91 (427) 245-8900</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>Mon &ndash; Sat: 10:00 AM &ndash; 7:30 PM</div>
+          </div>
+          <div class="footer-contact-item mb-0">
+            <i class="fa-solid fa-calendar-check"></i>
+            <div>Private Fittings by Prior Appointment</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <div>&copy; 2026 Stackly Haute Couture. All Rights Reserved. Salem Flagship Studio.</div>
+        <div class="d-flex flex-wrap gap-2 gap-sm-3 footer-bottom-links">
+          <a href="404.html" class="text-muted">Privacy Policy</a>
+          <span class="text-muted">&bull;</span>
+          <a href="404.html" class="text-muted">Bespoke Terms</a>
+          <span class="text-muted">&bull;</span>
+          <a href="404.html" class="text-muted">Sustainability Charter</a>
+          <span class="text-muted">&bull;</span>
+          <a href="404.html" class="text-muted">Atelier Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <div class="custom-modal-backdrop" id="videoModal">
+    <div class="custom-modal-box video-modal-box">
+      <button type="button" class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-video-header mb-2 pe-4">
+        <span class="solonick-tag mb-1">OFFICIAL SHOW REEL</span>
+        <h3 class="text-dark mb-0 fs-5">Aria Vance Couture &bull; Runway Show Reel</h3>
+      </div>
+      <div class="ratio ratio-16x9 rounded-3 overflow-hidden bg-black shadow modal-video-frame">
+        <video id="runwayVideoPlayer" controls playsinline preload="metadata" class="w-100 h-100 rounded-3">
+          <source src="assets/hero.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+      <p class="text-secondary small mt-2 mb-0">
+        Streamed live from our Salem atelier and international runway debuts, featuring bespoke handcrafted couture mastery.
+      </p>
+    </div>
+  </div>
+
+  
+  <div class="custom-modal-backdrop" id="lookbookModal">
+    <div class="custom-modal-box">
+      <button type="button" class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <img id="modalLookImg" src="" alt="Look Silhouette" class="w-100 rounded-3" style="max-height: 480px; object-fit: cover;">
+        </div>
+        <div class="col-md-6">
+          <span class="solonick-tag" id="modalLookTag">HAUTE COUTURE</span>
+          <h3 class="text-dark" id="modalLookTitle">Silhouette Name</h3>
+          <div class="yellow-accent-line"></div>
+          <p class="text-secondary" id="modalLookDesc">Detailed description of the garment craftsmanship and fabrics.</p>
+          <div class="bg-light p-3 rounded-2 border border-secondary-subtle mb-3">
+            <div class="small text-warning fw-bold">FABRIC COMPOSITION</div>
+            <div class="small text-dark">Pure Mulberry Ahimsa Silk, Hand-spun Organza, Metallic Bouillon.</div>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="signup.html" class="btn-gold btn-sm btn-book-fitting">Inquire Commission</a>
+            <a href="collections.html" class="btn-gold-outline btn-sm">Full Lookbook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

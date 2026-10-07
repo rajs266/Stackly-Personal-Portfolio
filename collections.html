@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Runway Collections &amp; Lookbook | Stackly Haute Couture</title>
+  <meta name="description" content="Explore signature runway looks, bespoke bridal couture, avant-garde evening gowns, and 3D digital garments by Stackly.">
+  <link rel="icon" type="image/webp" href="assets/top-logo.webp">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-architectural-grid">
+
+  
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+  <div class="ambient-gold-glow ambient-glow-top-right"></div>
+  <div class="ambient-gold-glow ambient-glow-bottom-left"></div>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="assets/logo.webp" alt="Stackly Haute Couture" class="brand-logo-img">
+      </a>
+      <ul class="nav-desktop-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="collections.html" class="active">Collections</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="signin.html" class="btn-gold-outline btn-sm btn-pill d-none d-md-inline-flex">Sign In</a>
+        <a href="signup.html" class="btn-gold btn-sm btn-pill header-cta-btn btn-book-fitting">Book Fitting</a>
+        <button type="button" class="mobile-nav-toggle" aria-label="Open mobile navigation menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 42px;">
+      </a>
+      <button type="button" class="mobile-drawer-close btn-close"></button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-user-tie"></i> About Designer</a></li>
+      <li><a href="collections.html" class="active"><i class="fa-solid fa-vest"></i> Collections Lookbook</a></li>
+      <li><a href="services.html"><i class="fa-solid fa-scissors"></i> Atelier Services</a></li>
+      <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Fashion Journal</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-location-dot"></i> Salem Atelier Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="signin.html" class="btn-gold-outline w-100 text-center justify-content-center">Sign In</a>
+      <a href="signup.html" class="btn-gold w-100 text-center justify-content-center">Book Fitting</a>
+    </div>
+  </aside>
+
+  <main>
+    
+    <section class="page-inner-hero hero-collections">
+      <div class="inner-hero-content reveal-on-scroll">
+        <span class="solonick-tag text-warning border-warning mb-3">SEASONAL ARCHIVE &bull; EDITORIAL LOOKBOOK</span>
+        <h1 class="hero-main-title">Runway Looks &amp; <span class="yellow-accent-word">Haute Silhouettes</span></h1>
+        <div class="yellow-accent-line center mb-3"></div>
+        <p class="hero-subtitle">
+          An immersive curation of bespoke commissions, Milan Fashion Week runway presentations, and avant-garde drapery handcrafted at Stackly Atelier.
+        </p>
+        <div class="inner-hero-breadcrumbs">
+          <a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a>
+          <span class="breadcrumb-sep">&bull;</span>
+          <span class="current-page">Collections Lookbook</span>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="pb-5 mb-5 pt-5">
+      <div class="container">
+        
+        <div class="filter-pills-bar justify-content-center mb-5">
+          <button type="button" class="filter-btn active" data-filter="all">All Silhouettes</button>
+          <button type="button" class="filter-btn" data-filter="couture">Haute Couture</button>
+          <button type="button" class="filter-btn" data-filter="avant-garde">Avant-Garde</button>
+          <button type="button" class="filter-btn" data-filter="bridal">Bridal Elegance</button>
+          <button type="button" class="filter-btn" data-filter="ready-to-wear">Ready-to-Wear</button>
+          <button type="button" class="filter-btn" data-filter="digital">3D Digital Couture</button>
+        </div>
+        <div class="row g-4" id="lookbookGridContainer">
+          
+          <div class="col-md-6 col-lg-4 lookbook-grid-item" data-category="couture">
+            <div class="lookbook-card">
+              <span class="lookbook-tag">HAUTE COUTURE</span>
+              <div class="lookbook-image-wrap">
+                <img src="assets/images/runway_1.webp" alt="Aura Obsidian Gown">
+                <div class="lookbook-overlay-cta">
+                  <h4 class="lookbook-title text-white">Aura Obsidian Gown</h4>
+                  <p class="lookbook-desc">Structured organza bodice with hand-stitched 24K gold bullion embroidery.</p>
+                  <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 lookbook-grid-item" data-category="avant-garde">
+            <div class="lookbook-card">
+              <span class="lookbook-tag">AVANT-GARDE</span>
+              <div class="lookbook-image-wrap">
+                <img src="assets/images/runway_2.webp" alt="Celestial Kinetic Coat">
+                <div class="lookbook-overlay-cta">
+                  <h4 class="lookbook-title text-white">Celestial Kinetic Coat</h4>
+                  <p class="lookbook-desc">Sculptural exaggerated lapels tailored from recycled heavy-weight cashmere wool.</p>
+                  <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 lookbook-grid-item" data-category="bridal">
+            <div class="lookbook-card">
+              <span class="lookbook-tag">BRIDAL ELEGANCE</span>
+              <div class="lookbook-image-wrap">
+                <img src="assets/images/runway_3.webp" alt="Nocturne Bridal Ensemble">
+                <div class="lookbook-overlay-cta">
+                  <h4 class="lookbook-title text-white">Nocturne Bridal Ensemble</h4>
+                  <p class="lookbook-desc">Pure Kanchipuram Ahimsa silk drape layered with French Chantilly lace borders.</p>
+                  <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 lookbook-grid-item" data-category="ready-to-wear">
+            <div class="lookbook-card">
+              <span class="lookbook-tag">READY-TO-WEAR</span>
+              <div class="lookbook-image-wrap">
+                <img src="assets/images/runway_4.webp" alt="Midnight Velvet Tuxedo">
+                <div class="lookbook-overlay-cta">
+                  <h4 class="lookbook-title text-white">Midnight Velvet Tuxedo</h4>
+                  <p class="lookbook-desc">Double-breasted silk-velvet tailoring with horn button accents and peak lapels.</p>
+                  <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 lookbook-grid-item" data-category="digital">
+            <div class="lookbook-card">
+              <span class="lookbook-tag">3D DIGITAL COUTURE</span>
+              <div class="lookbook-image-wrap">
+                <img src="assets/images/runway_5.webp" alt="Ethereal Prism Gown">
+                <div class="lookbook-overlay-cta">
+                  <h4 class="lookbook-title text-white">Ethereal Prism Gown</h4>
+                  <p class="lookbook-desc">Parametric 3D printed corsetry with fluid pleated metallic chiffon skirts.</p>
+                  <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 lookbook-grid-item" data-category="couture">
+            <div class="lookbook-card">
+              <span class="lookbook-tag">HAUTE COUTURE</span>
+              <div class="lookbook-image-wrap">
+                <img src="assets/images/runway_6.webp" alt="Saffron Solstice Cape">
+                <div class="lookbook-overlay-cta">
+                  <h4 class="lookbook-title text-white">Saffron Solstice Cape</h4>
+                  <p class="lookbook-desc">Voluminous high-neck drape in raw mustard gold handloom brocade.</p>
+                  <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 lookbook-grid-item" data-category="avant-garde">
+            <div class="lookbook-card">
+              <span class="lookbook-tag">AVANT-GARDE</span>
+              <div class="lookbook-image-wrap">
+                <img src="assets/images/runway_7.webp" alt="Geometric Silk Kimono">
+                <div class="lookbook-overlay-cta">
+                  <h4 class="lookbook-title text-white">Geometric Silk Kimono</h4>
+                  <p class="lookbook-desc">Deconstructed sleeves with contrast yellow silk piping and architectural pleats.</p>
+                  <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 lookbook-grid-item" data-category="bridal">
+            <div class="lookbook-card">
+              <span class="lookbook-tag">BRIDAL ELEGANCE</span>
+              <div class="lookbook-image-wrap">
+                <img src="assets/images/runway_8.webp" alt="Elysian Gold Lehenga Gown">
+                <div class="lookbook-overlay-cta">
+                  <h4 class="lookbook-title text-white">Elysian Gold Lehenga Gown</h4>
+                  <p class="lookbook-desc">Hand-loomed metallic zari threads woven into a modern western corseted bridal silhouette.</p>
+                  <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 col-lg-4 lookbook-grid-item" data-category="ready-to-wear">
+            <div class="lookbook-card">
+              <span class="lookbook-tag">READY-TO-WEAR</span>
+              <div class="lookbook-image-wrap">
+                <img src="assets/images/pexels-cottonbro-6069964.webp" alt="Solaris Architectural Trench">
+                <div class="lookbook-overlay-cta">
+                  <h4 class="lookbook-title text-white">Solaris Architectural Trench</h4>
+                  <p class="lookbook-desc">Sharp-lapel structured trench coat in organic twill with hand-cast 24K gold buckle hardware.</p>
+                  <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="py-5 section-dark-slate border-top border-bottom position-relative">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span class="solonick-tag">FEATURED RUNWAY HIGHLIGHTS</span>
+          <h2 class="section-title text-white">Live From The <span class="yellow-accent-word">Catwalk</span></h2>
+          <div class="yellow-accent-line center"></div>
+        </div>
+
+        <div class="swiper swiper-collections-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="lookbook-card">
+                <span class="lookbook-tag">MILAN FW26</span>
+                <div class="lookbook-image-wrap">
+                  <img src="assets/images/pexels-rgsk97-1477437.webp" alt="Milan FW26 Runway Catwalk">
+                  <div class="lookbook-overlay-cta">
+                    <h4 class="lookbook-title text-white">Milan Runway Edition</h4>
+                    <p class="lookbook-desc">Archival structured outerwear debuted live at the Milan Autumn/Winter couture showcase.</p>
+                    <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="lookbook-card">
+                <span class="lookbook-tag">PARIS SALON</span>
+                <div class="lookbook-image-wrap">
+                  <img src="assets/images/runway_1.webp" alt="Paris Haute Couture Salon">
+                  <div class="lookbook-overlay-cta">
+                    <h4 class="lookbook-title text-white">Paris Grand Salon</h4>
+                    <p class="lookbook-desc">Hand-loomed peace silk gown with 24K bullion embroidery presented at Paris Couture Week.</p>
+                    <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="lookbook-card">
+                <span class="lookbook-tag">SALEM SHOWCASE</span>
+                <div class="lookbook-image-wrap">
+                  <img src="assets/images/pexels-sandra-elizabeth-rivera-ayauca-3003710-22605246.webp" alt="Salem Atelier Runway Revelation">
+                  <div class="lookbook-overlay-cta">
+                    <h4 class="lookbook-title text-white">Salem Atelier Premiere</h4>
+                    <p class="lookbook-desc">Bespoke heirloom bridal silhouette tailored in pure Ahimsa silk for private salon fittings.</p>
+                    <button type="button" class="lookbook-view-btn">View Silhouette <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="py-5 bg-architectural-grid position-relative" id="runway-odyssey">
+      <div class="ambient-gold-glow ambient-glow-top-left" style="opacity: 0.16;"></div>
+      <div class="container py-3">
+        <div class="text-center max-w-700 mx-auto mb-5 reveal-on-scroll">
+          <span class="solonick-tag">CREATIVE METAMORPHOSIS</span>
+          <h2 class="display-6 fw-bold text-dark mb-2">The <span class="yellow-accent-word">Four-Stage</span> Couture Odyssey</h2>
+          <div class="yellow-accent-line center mb-3"></div>
+          <p class="text-secondary small mb-0">From anatomical charcoal gesture sketches to world runway spotlights, observe the meticulous journey of every Stackly heirloom silhouette.</p>
+        </div>
+
+        <div class="row g-4">
+          
+          <div class="col-lg-3 col-md-6 reveal-on-scroll">
+            <div class="odyssey-step-card">
+              <div class="odyssey-img-wrap">
+                <img src="assets/images/craft_atelier_1.webp" alt="Stage 01 Ideation">
+                <span class="odyssey-step-badge">STAGE 01</span>
+              </div>
+              <div class="odyssey-body">
+                <h3 class="odyssey-title">Architectural Ideation</h3>
+                <p class="odyssey-desc">Drafting anatomical proportions on vellum, mapping tension lines before cloth is cut.</p>
+                <div>
+                  <span class="odyssey-meta-pill"><i class="fa-solid fa-pen-nib"></i> Charcoal Drapes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-3 col-md-6 reveal-on-scroll">
+            <div class="odyssey-step-card">
+              <div class="odyssey-img-wrap">
+                <img src="assets/images/pexels-cottonbro-5582523.webp" alt="Stage 02 3D Moulage">
+                <span class="odyssey-step-badge">STAGE 02</span>
+              </div>
+              <div class="odyssey-body">
+                <h3 class="odyssey-title">3D Moulage Sculpting</h3>
+                <p class="odyssey-desc">Draping calico toile on mannequins, translating flat charcoal concepts into living volume.</p>
+                <div>
+                  <span class="odyssey-meta-pill"><i class="fa-solid fa-scissors"></i> Calico Toile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-3 col-md-6 reveal-on-scroll">
+            <div class="odyssey-step-card">
+              <div class="odyssey-img-wrap">
+                <img src="assets/images/craft_atelier_2.webp" alt="Stage 03 Silk Weaving & Embroidery">
+                <span class="odyssey-step-badge">STAGE 03</span>
+              </div>
+              <div class="odyssey-body">
+                <h3 class="odyssey-title">Ahimsa Weave &amp; Zardozi</h3>
+                <p class="odyssey-desc">Weaving cruelty-free Ahimsa silk on pit-looms, embellished with heirloom gold bullion.</p>
+                <div>
+                  <span class="odyssey-meta-pill"><i class="fa-solid fa-gem"></i> Pure Peace Silk</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-3 col-md-6 reveal-on-scroll">
+            <div class="odyssey-step-card">
+              <div class="odyssey-img-wrap">
+                <img src="assets/images/runway_2.webp" alt="Stage 04 Runway Debut">
+                <span class="odyssey-step-badge">STAGE 04</span>
+              </div>
+              <div class="odyssey-body">
+                <h3 class="odyssey-title">Catwalk Revelation</h3>
+                <p class="odyssey-desc">Unveiling the silhouette under salon runway spotlights for discerning couture patrons.</p>
+                <div>
+                  <span class="odyssey-meta-pill"><i class="fa-solid fa-camera"></i> Runway Debut</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="py-5 section-dark-slate position-relative" id="press-critiques">
+      <div class="ambient-gold-glow ambient-glow-bottom-right" style="opacity: 0.16;"></div>
+      <div class="container py-3 position-relative" style="z-index: 2;">
+        <div class="text-center max-w-700 mx-auto mb-5 reveal-on-scroll">
+          <span class="solonick-tag">INTERNATIONAL PRESS DISPATCHES</span>
+          <h2 class="display-6 fw-bold text-white mb-2">Celebrated In <span class="yellow-accent-word">Global Publications</span></h2>
+          <div class="yellow-accent-line center mb-3"></div>
+          <p class="text-secondary small mb-0">Dispatches and critical reviews from international fashion editors covering Stackly Haute Couture runway showcases.</p>
+        </div>
+
+        <div class="row g-4">
+          
+          <div class="col-lg-4 col-md-6 reveal-on-scroll">
+            <div class="editorial-card">
+              <div class="editorial-img-wrap">
+                <img src="assets/images/runway_4.webp" alt="Vogue Paris Review">
+                <div class="editorial-preview-title">
+                  <span class="editorial-pub-tag">VOGUE PARIS</span>
+                  <h3 class="editorial-mini-heading">Fashion Week Critique</h3>
+                </div>
+              </div>
+              <div class="editorial-body">
+                <span class="editorial-pub-tag">VOGUE PARIS</span>
+                <div class="editorial-date">FASHION WEEK SPECIAL &bull; AUTUMN 2026</div>
+                <blockquote class="editorial-quote">
+                  "Aria Vance dismantles and reassembles modern couture with tectonic Ahimsa silk grace. A rare masterclass in ethical sculptural grandeur."
+                </blockquote>
+                <div class="editorial-author">
+                  <i class="fa-solid fa-feather-pointed text-warning"></i> Céleste Moreau, Chief Fashion Editor
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-4 col-md-6 reveal-on-scroll">
+            <div class="editorial-card">
+              <div class="editorial-img-wrap">
+                <img src="assets/images/runway_5.webp" alt="Harper's Bazaar Review">
+                <div class="editorial-preview-title">
+                  <span class="editorial-pub-tag">HARPER'S BAZAAR</span>
+                  <h3 class="editorial-mini-heading">Couture Salon Report</h3>
+                </div>
+              </div>
+              <div class="editorial-body">
+                <span class="editorial-pub-tag">HARPER'S BAZAAR</span>
+                <div class="editorial-date">COUTURE REPORT &bull; SUMMER 2026</div>
+                <blockquote class="editorial-quote">
+                  "The Salem atelier is bridging thousand-year handloom heritage with Paris salon perfection. Each gown has the gravitas of a museum sculpture."
+                </blockquote>
+                <div class="editorial-author">
+                  <i class="fa-solid fa-feather-pointed text-warning"></i> Julian Thorne, European Critic
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-4 col-md-6 reveal-on-scroll">
+            <div class="editorial-card">
+              <div class="editorial-img-wrap">
+                <img src="assets/images/runway_6.webp" alt="Elle International Review">
+                <div class="editorial-preview-title">
+                  <span class="editorial-pub-tag">ELLE INTERNATIONAL</span>
+                  <h3 class="editorial-mini-heading">Avant-Garde Spotlight</h3>
+                </div>
+              </div>
+              <div class="editorial-body">
+                <span class="editorial-pub-tag">ELLE INTERNATIONAL</span>
+                <div class="editorial-date">AVANT-GARDE SPOTLIGHT &bull; SPRING 2026</div>
+                <blockquote class="editorial-quote">
+                  "Wearable poetry that breathes: Zero-harm cruelty-free luxury crafted for the modern monarch. Stackly redefines what couture can stand for."
+                </blockquote>
+                <div class="editorial-author">
+                  <i class="fa-solid fa-feather-pointed text-warning"></i> Simone Althaus, Haute Couture Columnist
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <div class="custom-modal-backdrop" id="lookbookModal">
+    <div class="custom-modal-box">
+      <button type="button" class="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <img id="modalLookImg" src="" alt="Look Silhouette" class="w-100 rounded-3" style="max-height: 480px; object-fit: cover;">
+        </div>
+        <div class="col-md-6">
+          <span class="solonick-tag" id="modalLookTag">HAUTE COUTURE</span>
+          <h3 class="text-dark" id="modalLookTitle">Silhouette Name</h3>
+          <div class="yellow-accent-line"></div>
+          <p class="text-secondary" id="modalLookDesc">Detailed description of garment craftsmanship.</p>
+          <div class="bg-light p-3 rounded-2 border border-secondary-subtle mb-3">
+            <div class="small text-warning fw-bold">BESPOKE ORDER TIMELINE</div>
+            <div class="small text-dark">4 to 8 weeks handcrafting with 2 in-person muslin toile fittings.</div>
+          </div>
+          <a href="contact.html" class="btn-gold btn-sm">Commission This Look</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-newsletter-box">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="solonick-tag mb-2">STAY INFORMED</span>
+            <h3 class="fw-bold text-dark mb-1">Subscribe to Stackly Atelier Gazette</h3>
+            <p class="text-secondary small mb-0">Private lookbook drops, runway previews, and bespoke Ahimsa silk sourcing dispatches.</p>
+          </div>
+          <div class="col-lg-6">
+            <form class="footer-newsletter-input-group" onsubmit="event.preventDefault(); window.location.href='404.html';">
+              <input type="email" placeholder="Enter your VIP client email..." required>
+              <button type="submit" class="btn-gold py-2 px-3">
+                <span>Subscribe</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 footer-top">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block mb-2">
+            <img src="assets/logo.webp" alt="Stackly Haute Couture" class="brand-logo-img" style="height: 36px;">
+          </a>
+          <p class="footer-brand-desc mb-3">
+            Stackly is a premier Haute Couture and Bespoke Fashion Atelier directed by lead designer Aria Vance in Salem &amp; Milan. Crafting architectural silhouettes and heirloom bridal creations for international runways.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="footer-social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="404.html" class="footer-social-icon" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="text-secondary small mt-3" style="font-size: 0.8rem;">
+            <i class="fa-solid fa-gem text-warning me-1"></i> Sustainable Ahimsa Silk Atelier
+          </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-2">
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>About</a></li>
+            <li><a href="collections.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Collections</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Services</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Journal</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3">
+          <h4 class="footer-title">Atelier Portals</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Bespoke Bridal Salon</a></li>
+            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>VIP Client Lounge</a></li>
+            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Digital Haute Couture</a></li>
+            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Runway Press Kit</a></li>
+            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Archival Lookbook</a></li>
+            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Custom Embroidery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-title">Salem Flagship Studio</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong class="text-dark">Stackly Atelier:</strong><br>
+              MMR Complex, Chinna Thirupathi, Salem 636008
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>concierge@thestackly.couture</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>+91 98420 54321 / +91 (427) 245-8900</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>Mon &ndash; Sat: 10:00 AM &ndash; 7:30 PM</div>
+          </div>
+          <div class="footer-contact-item mb-0">
+            <i class="fa-solid fa-calendar-check"></i>
+            <div>Private Fittings by Prior Appointment</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <div>&copy; 2026 Stackly Haute Couture. All Rights Reserved. Salem Flagship Studio.</div>
+        <div class="d-flex flex-wrap gap-2 gap-sm-3 footer-bottom-links">
+          <a href="404.html" class="text-muted">Privacy Policy</a>
+          <span class="text-muted">&bull;</span>
+          <a href="404.html" class="text-muted">Bespoke Terms</a>
+          <span class="text-muted">&bull;</span>
+          <a href="404.html" class="text-muted">Sustainability Charter</a>
+          <span class="text-muted">&bull;</span>
+          <a href="404.html" class="text-muted">Atelier Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
