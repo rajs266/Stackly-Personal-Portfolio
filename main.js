@@ -42,9 +42,9 @@ function initPreloader() {
   let isDismissed = false;
 
   const statuses = [
-    'CURATING SILHOUETTES...',
+    'CURATING BESPOKE SILHOUETTES...',
     'DRAPING MULBERRY SILK...',
-    'CALIBRATING RUNWAY LIGHTS...',
+    'CALIBRATING RUNWAY ILLUMINATION...',
     'WELCOME TO STACKLY ATELIER'
   ];
 
@@ -59,19 +59,19 @@ function initPreloader() {
       preloader.classList.add('loaded');
       setTimeout(() => {
         preloader.style.display = 'none';
-      }, 350);
-    }, 120);
+      }, 400);
+    }, 100);
   }
 
   const startTime = performance.now();
-  const targetDuration = 600;
+  const targetDuration = 700;
 
   function animateProgress(now) {
     if (isDismissed) return;
     const elapsed = now - startTime;
     const progress = Math.min(elapsed / targetDuration, 1);
     
-   
+    // Ease Out Cubic curve for snappy responsive feel
     const currentPct = Math.floor((1 - Math.pow(1 - progress, 3)) * 100);
 
     if (fill) fill.style.width = currentPct + '%';
@@ -93,9 +93,13 @@ function initPreloader() {
 
   requestAnimationFrame(animateProgress);
 
- 
-  setTimeout(dismissPreloader, 1100);
-  window.addEventListener('load', dismissPreloader, { once: true });
+  // Safety fallback: guarantee preloader dismisses well under 2 seconds (1000ms target max)
+  setTimeout(dismissPreloader, 1000);
+  if (document.readyState === 'complete') {
+    dismissPreloader();
+  } else {
+    window.addEventListener('load', dismissPreloader, { once: true });
+  }
 }
 
 /* ==========================================================================
