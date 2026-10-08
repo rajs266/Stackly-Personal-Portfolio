@@ -3,228 +3,405 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>404 - Look Not Found | Stackly Haute Couture Atelier</title>
-  <meta name="description" content="The requested bespoke couture page or external channel is currently in atelier drafting.">
+  <title>404 - Page Not Found | Stackly Haute Couture Atelier</title>
+  <meta name="description" content="The requested page was not found on Stackly Haute Couture Atelier.">
   <link rel="icon" type="image/webp" href="assets/top-logo.webp">
 
-  
+  <!-- Typography & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  
+  <!-- Core CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .error-hero-section {
-      min-height: 85vh;
+    /* Full screen container */
+    .error-wrapper {
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .error-card {
-      background: #ffffff;
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-lg);
-      padding: 40px 32px;
-      max-width: 620px;
-      width: 100%;
-      box-shadow: var(--shadow-hover);
+      padding: 30px 20px;
       position: relative;
       overflow: hidden;
+      background: radial-gradient(circle at 50% 40%, rgba(194, 136, 0, 0.08) 0%, rgba(15, 23, 42, 0.03) 70%, transparent 100%);
     }
+
+    /* Animated background glow orbs */
+    .bg-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 0;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+    .bg-orb-1 {
+      width: 350px;
+      height: 350px;
+      background: rgba(194, 136, 0, 0.25);
+      top: 10%;
+      left: 10%;
+      animation: floatOrb 10s ease-in-out infinite alternate;
+    }
+    .bg-orb-2 {
+      width: 400px;
+      height: 400px;
+      background: rgba(217, 119, 6, 0.18);
+      bottom: 10%;
+      right: 12%;
+      animation: floatOrb 14s ease-in-out infinite alternate-reverse;
+    }
+    .bg-orb-3 {
+      width: 260px;
+      height: 260px;
+      background: rgba(146, 64, 14, 0.15);
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulseGlow 5s ease-in-out infinite alternate;
+    }
+
+    /* Floating geometric icon accents */
+    .floating-shape {
+      position: absolute;
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .shape-1 {
+      top: 15%;
+      right: 15%;
+      font-size: 3rem;
+      color: var(--gold-primary);
+      animation: rotateFloat 18s linear infinite;
+    }
+    .shape-2 {
+      bottom: 18%;
+      left: 12%;
+      font-size: 2.5rem;
+      color: var(--gold-dark);
+      animation: floatY 6s ease-in-out infinite alternate;
+    }
+
+    /* 404 Central Card */
+    .error-card {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-card);
+      border-radius: 24px;
+      padding: 50px 40px;
+      max-width: 580px;
+      width: 100%;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1), 0 0 35px rgba(194, 136, 0, 0.12);
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Animated gradient accent bar on top */
     .error-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--gold-dark), var(--gold-primary), var(--gold-light));
+      height: 5px;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold-primary), var(--gold-light), var(--gold-primary), var(--gold-dark));
+      background-size: 200% 100%;
+      animation: gradientShift 4s linear infinite;
     }
+
+    /* Avatar preview image & animated ring */
+    .avatar-wrapper {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 24px;
+    }
+
+    .error-img-preview {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold-primary);
+      box-shadow: 0 8px 25px rgba(194, 136, 0, 0.3);
+      animation: avatarFloat 4s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    .avatar-ring {
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      border: 2px dashed rgba(194, 136, 0, 0.45);
+      border-radius: 50%;
+      animation: spinRing 16s linear infinite;
+      z-index: 1;
+    }
+
+    /* Shimmering 404 Text */
     .error-code {
-      font-size: 5.5rem;
+      font-size: 5.8rem;
       font-weight: 800;
       line-height: 1;
       font-family: var(--font-heading);
-      background: linear-gradient(135deg, var(--text-white) 0%, var(--gold-primary) 100%);
+      background: linear-gradient(135deg, #1e293b 0%, var(--gold-primary) 50%, #d97706 100%);
+      background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      letter-spacing: -2px;
+      animation: textShimmer 4s ease infinite;
     }
-    .error-img-preview {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 20px;
-      border: 3px solid var(--gold-primary);
-      box-shadow: 0 8px 24px var(--gold-glow);
+
+    /* Badge Tag */
+    .solonick-tag-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      background: rgba(194, 136, 0, 0.1);
+      padding: 6px 16px;
+      border-radius: 30px;
+      border: 1px solid rgba(194, 136, 0, 0.25);
+      margin-bottom: 16px;
+    }
+
+    /* Custom animated buttons */
+    .btn-404-primary {
+      background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+      color: #ffffff !important;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(194, 136, 0, 0.3);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .btn-404-primary:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 10px 28px rgba(194, 136, 0, 0.45);
+    }
+
+    .btn-404-primary:active {
+      transform: translateY(-1px) scale(0.99);
+    }
+
+    .btn-404-primary i {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-404-primary:hover i {
+      transform: translateX(-4px);
+    }
+
+    .btn-404-secondary {
+      background: rgba(15, 23, 42, 0.05);
+      color: var(--text-dark) !important;
+      border: 1px solid var(--border-medium);
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .btn-404-secondary:hover {
+      background: #0f172a;
+      color: #ffffff !important;
+      border-color: #0f172a;
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+    }
+
+    .btn-404-secondary:active {
+      transform: translateY(-1px) scale(0.99);
+    }
+
+    .btn-404-secondary i {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-404-secondary:hover i {
+      transform: scale(1.15);
+    }
+
+    /* Keyframes */
+    @keyframes cardEntrance {
+      0% {
+        opacity: 0;
+        transform: translateY(35px) scale(0.96);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes avatarFloat {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes spinRing {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes floatOrb {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      100% {
+        transform: translate(35px, 25px) scale(1.12);
+      }
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(0.95);
+      }
+      100% {
+        opacity: 0.65;
+        transform: translate(-50%, -50%) scale(1.18);
+      }
+    }
+
+    @keyframes rotateFloat {
+      0% {
+        transform: rotate(0deg) translateY(0);
+      }
+      50% {
+        transform: rotate(180deg) translateY(-15px);
+      }
+      100% {
+        transform: rotate(360deg) translateY(0);
+      }
+    }
+
+    @keyframes floatY {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-18px);
+      }
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 200% 50%;
+      }
+    }
+
+    @keyframes textShimmer {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Responsive styling */
+    @media (max-width: 576px) {
+      .error-card {
+        padding: 36px 24px;
+        border-radius: 20px;
+      }
+      .error-code {
+        font-size: 4.5rem;
+      }
+      .btn-container {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-404-primary, .btn-404-secondary {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body class="bg-architectural-grid">
 
-  
-  <header class="site-header">
-    <div class="header-container">
-      <a href="index.html" class="brand-logo-wrap">
-        <img src="assets/logo.webp" alt="Stackly Haute Couture" class="brand-logo-img">
-      </a>
-      <ul class="nav-desktop-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="collections.html">Collections</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Journal</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="header-actions">
-        <a href="index.html" class="btn-gold btn-sm btn-pill">
-          <i class="fa-solid fa-house me-1"></i> Home
+  <!-- Ambient Animated Background Lights -->
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+
+  <!-- Decorative Floating Accents -->
+  <i class="fa-solid fa-scissors floating-shape shape-1"></i>
+  <i class="fa-solid fa-compass floating-shape shape-2"></i>
+
+  <!-- Main Viewport Section -->
+  <main class="error-wrapper">
+    <div class="error-card">
+      <div class="avatar-wrapper">
+        <div class="avatar-ring"></div>
+        <img src="assets/images/pexels-pavel-danilyuk-6461201.webp" alt="Stackly Atelier" class="error-img-preview">
+      </div>
+      
+      <span class="solonick-tag-badge">Page Not Found</span>
+      <div class="error-code">404</div>
+      <h1 class="h3 fw-bold text-dark mb-2">Looks Like You're Lost</h1>
+      <p class="text-secondary mb-4" style="font-size: 0.95rem; max-width: 440px; margin-left: auto; margin-right: auto;">
+        The page you are looking for doesn't exist, has been moved, or is under bespoke atelier tailoring.
+      </p>
+
+      <!-- 2 Buttons: Go Back & Back to Home -->
+      <div class="d-flex flex-wrap gap-3 justify-content-center btn-container">
+        <button onclick="history.back()" class="btn-404-primary" type="button">
+          <i class="fa-solid fa-arrow-left"></i> Go Back
+        </button>
+        <a href="index.html" class="btn-404-secondary">
+          <i class="fa-solid fa-house"></i> Back to Home
         </a>
       </div>
     </div>
-  </header>
-
-  <main style="padding-top: 80px;">
-    <section class="error-hero-section">
-      <div class="error-card scroll-reveal is-revealed">
-        <img src="assets/images/pexels-pavel-danilyuk-6461089.webp" alt="Aria Vance Atelier" class="error-img-preview">
-        <span class="solonick-tag">SARTORIAL NOTICE</span>
-        <div class="error-code">404</div>
-        <h2 class="h3 fw-bold text-dark mb-2">Silhouette Under Tailoring</h2>
-        <p class="text-secondary mb-4" style="font-size: 0.95rem;">
-          This channel or page is currently being curated in our Salem atelier. Please return to our main lookbook or contact our bespoke concierge.
-        </p>
-
-        <div class="d-flex flex-wrap gap-2 justify-content-center">
-          <a href="index.html" class="btn-gold btn-sm">
-            <i class="fa-solid fa-arrow-left me-1"></i> Return to Homepage
-          </a>
-          <a href="collections.html" class="btn-gold-outline btn-sm">
-            <i class="fa-solid fa-vest me-1"></i> Explore Lookbook
-          </a>
-          <a href="contact.html" class="btn-gold-outline btn-sm">
-            <i class="fa-solid fa-paper-plane me-1"></i> Contact Atelier
-          </a>
-        </div>
-      </div>
-    </section>
   </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-      
-      <div class="footer-newsletter-box">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-6">
-            <span class="solonick-tag mb-2">STAY INFORMED</span>
-            <h3 class="fw-bold text-dark mb-1">Subscribe to Stackly Atelier Gazette</h3>
-            <p class="text-secondary small mb-0">Private lookbook drops, runway previews, and bespoke Ahimsa silk sourcing dispatches.</p>
-          </div>
-          <div class="col-lg-6">
-            <form class="footer-newsletter-input-group" onsubmit="event.preventDefault(); window.location.href='404.html';">
-              <input type="email" placeholder="Enter your VIP client email..." required>
-              <button type="submit" class="btn-gold py-2 px-3">
-                <span>Subscribe</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="row g-4 footer-top">
-        <div class="col-lg-4 col-md-6">
-          <a href="index.html" class="d-inline-block mb-2">
-            <img src="assets/logo.webp" alt="Stackly Haute Couture" class="brand-logo-img" style="height: 36px;">
-          </a>
-          <p class="footer-brand-desc mb-3">
-            Stackly is a premier Haute Couture and Bespoke Fashion Atelier directed by lead designer Aria Vance in Salem &amp; Milan. Crafting architectural silhouettes and heirloom bridal creations for international runways.
-          </p>
-          <div class="footer-social-links">
-            <a href="404.html" class="footer-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="404.html" class="footer-social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
-            <a href="404.html" class="footer-social-icon" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
-            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="404.html" class="footer-social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-          <div class="text-secondary small mt-3" style="font-size: 0.8rem;">
-            <i class="fa-solid fa-gem text-warning me-1"></i> Sustainable Ahimsa Silk Atelier
-          </div>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-2">
-          <h4 class="footer-title">Navigation</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Home</a></li>
-            <li><a href="about.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>About</a></li>
-            <li><a href="collections.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Collections</a></li>
-            <li><a href="services.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Services</a></li>
-            <li><a href="blog.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Journal</a></li>
-            <li><a href="contact.html"><i class="fa-solid fa-angle-right me-2 text-warning"></i>Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-3">
-          <h4 class="footer-title">Atelier Portals</h4>
-          <ul class="footer-links-list">
-            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Bespoke Bridal Salon</a></li>
-            <li><a href="signup.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>VIP Client Lounge</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Digital Haute Couture</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Runway Press Kit</a></li>
-            <li><a href="collections.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Archival Lookbook</a></li>
-            <li><a href="services.html"><i class="fa-solid fa-bolt me-2 text-warning"></i>Custom Embroidery</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <h4 class="footer-title">Salem Flagship Studio</h4>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <div>
-              <strong class="text-dark">Stackly Atelier:</strong><br>
-              MMR Complex, Chinna Thirupathi, Salem 636008
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <div>concierge@thestackly.couture</div>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <div>+91 98420 54321 / +91 (427) 245-8900</div>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-clock"></i>
-            <div>Mon &ndash; Sat: 10:00 AM &ndash; 7:30 PM</div>
-          </div>
-          <div class="footer-contact-item mb-0">
-            <i class="fa-solid fa-calendar-check"></i>
-            <div>Private Fittings by Prior Appointment</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
-        <div>&copy; 2026 Stackly Haute Couture. All Rights Reserved. Salem Flagship Studio.</div>
-        <div class="d-flex flex-wrap gap-2 gap-sm-3 footer-bottom-links">
-          <a href="404.html" class="text-muted">Privacy Policy</a>
-          <span class="text-muted">&bull;</span>
-          <a href="404.html" class="text-muted">Bespoke Terms</a>
-          <span class="text-muted">&bull;</span>
-          <a href="404.html" class="text-muted">Sustainability Charter</a>
-          <span class="text-muted">&bull;</span>
-          <a href="404.html" class="text-muted">Atelier Security</a>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
