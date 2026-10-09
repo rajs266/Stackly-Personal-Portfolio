@@ -820,36 +820,7 @@ function initAuthLogic() {
 
  
   window.handleForgotPassword = function() {
-    if (typeof Swal !== 'undefined') {
-      Swal.fire({
-        title: 'Reset Atelier Security Pass',
-        text: 'Enter your registered email address to receive secure reset credentials.',
-        input: 'email',
-        inputPlaceholder: 'patron@stackly.couture',
-        showCancelButton: true,
-        confirmButtonText: 'Dispatch Key',
-        cancelButtonText: 'Cancel',
-        customClass: {
-          popup: 'couture-swal-popup'
-        }
-      }).then((result) => {
-        if (result.isConfirmed && result.value) {
-          Swal.fire({
-            title: 'Instructions Dispatched!',
-            text: `A cryptographic security reset link has been dispatched to ${result.value}.`,
-            icon: 'success',
-            customClass: {
-              popup: 'couture-swal-popup'
-            }
-          });
-        }
-      });
-    } else {
-      const email = prompt('Enter your registered atelier email to reset your security pass:');
-      if (email) {
-        alert(`A cryptographic security reset link has been dispatched to ${email}.`);
-      }
-    }
+    window.location.href = '404.html';
   };
 
  
